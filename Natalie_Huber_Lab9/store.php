@@ -3,7 +3,7 @@
 // Obtain a connection object by connecting to the db
 echo "<html><head><title>My Store Web Application </title><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.mi n.js'></script></head><body> My Store Web Application </body></html>";
 
-$connection = @mysqli_connect (localhost, root, "22scruffy", lab5); // please fill these parameters with the actual data
+$connection = @mysqli_connect (localhost, root, " ", lab5); // please fill these parameters with the actual data
 $query= "select * from store;";
 
 $resultset = mysqli_query($connection,$query);
@@ -25,16 +25,16 @@ echo '<form enctype="multipart/form-data" action="http://localhost/SQLInsertHand
 <input type="reset" />
 </form>';
 
-echo "<script>$(document).ready(function(){ 
-	$('.button').click(function(){ 
-		var clickBtnName = $(this).attr('name'); 
-		var ajaxurl = 'http://localhost/SQLDeleteHandler.php'; 
-		var data = {'id': clickBtnName}; 
-		$.post(ajaxurl, data, function(response) { 
-			window.location.href='http://localhost/store.php'; 
-		}); 
-	}); 
-}); 
+echo "<script>$(document).ready(function(){
+	$('.button').click(function(){
+		var clickBtnName = $(this).attr('name');
+		var ajaxurl = 'http://localhost/SQLDeleteHandler.php';
+		var data = {'id': clickBtnName};
+		$.post(ajaxurl, data, function(response) {
+			window.location.href='http://localhost/store.php';
+		});
+	});
+});
 </script>";
 
 while ($row = mysqli_fetch_array($resultset, MYSQLI_NUM)) {
