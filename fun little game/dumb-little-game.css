@@ -1,0 +1,40 @@
+body {
+                
+        font-family: sans-serif;
+        background-color: lightblue;
+        color:grey;
+    }
+        
+#shape {
+        background-color: red;
+        display: none;
+        position: relative;
+}
+
+.rectangle {
+        width: 220px;
+        height: 120px;
+        background: #4da1f7;
+        background-color: red;
+        display: none;
+        position: relative;
+        }
+
+.oval {
+        width: 200px;
+        height: 100px;
+        background: #e9337c;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        display: none;
+        position: relative;
+        background-color: red;
+        }
+
+            
+.bold {
+                
+        font-weight: bold;
+                
+        }
